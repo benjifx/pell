@@ -115,6 +115,7 @@ export const init = settings => {
 
   settings.actions.forEach(action => {
     const button = document.createElement('button')
+    button.type = 'button'
     button.className = settings.classes.button
     button.innerHTML = action.icon
     button.title = action.title

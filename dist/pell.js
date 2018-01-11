@@ -150,6 +150,7 @@ var init = function init(settings) {
 
   settings.actions.forEach(function (action) {
     var button = document.createElement('button');
+    button.type = 'button';
     button.className = settings.classes.button;
     button.innerHTML = action.icon;
     button.title = action.title;
