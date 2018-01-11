@@ -110,6 +110,9 @@ export const init = settings => {
   settings.element.content.contentEditable = true
   settings.element.content.className = settings.classes.content
   settings.element.content.oninput = event => settings.onChange(event.target.innerHTML)
+  settings.element.content.onfocus = event => settings.onFocus(event)
+  settings.element.content.onblur = event => settings.onBlur(event)
+
   settings.element.content.onkeydown = preventTab
   settings.element.appendChild(settings.element.content)
 
